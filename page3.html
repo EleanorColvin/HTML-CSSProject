@@ -7,7 +7,15 @@
     <title>Document</title>
     <link rel = "stylesheet" href = "standardStyle.css">
     <script>
+        var data = new FormData();
+        var r = new XMLHttpRequest()
         var lastInput  = "";
+        function doForm()
+        {
+            var data = new FormData(document.getElementbyID("form"));
+            r.open("get", "SERVER SCRIPT");
+            r.send(data);
+        }
         function printInput() {
         document.getElementById('text').innerHTML = 
                     lastInput+" - "+document.getElementById("input").value;
@@ -30,12 +38,11 @@
         </div>
         <div id = main>
             <h3>If you don't need any book recommendations, try making one!</h3>
-            <form method = "GET">
+            <form id = form method= get>
                 <label><b>Enter a Book Rec: </b></label>
                 <input type="text" name="message" id="input">
-              </form>
-            
-              <input type="submit" onclick="printInput();"><br/>
+              </form><input type="submit" onclick="printInput();"><br/>
+
               <br/><label>Your Recs: </label>
               <p><span id='text'></span></p>
 
