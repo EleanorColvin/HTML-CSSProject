@@ -1,12 +1,15 @@
-#main{
+/* Stylesheet specific to home page, mostly for layout of photos*/
+#main {
     background-image: url("images/bookstore.jpg");
 }
-#flexBox{
-    display:flex;
+
+#flexBox {
+    display: flex;
     align-items: center;
     margin: auto;
 }
-img{
+
+img {
     width: 100px;
     margin: 10px;
     border: 2px solid black;
