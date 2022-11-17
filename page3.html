@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "standardStyle.css">
+    <script>
+        var lastInput  = "";
+        function printInput() {
+        document.getElementById('text').innerHTML = 
+                    lastInput+" - "+document.getElementById("input").value;
+        lastInput = lastInput+" - "+document.getElementById("input").value;
+    }
+
+    </script>
+</head>
+<body>
+    <div id = grid>
+        <div id = navbar>
+            <a class = page href = "index.html">Home</a>
+            <a class = page href = "page1.html">Page 1</a>
+            <a class = page hREF = "page2.html">Page 2</a>
+        </div>
+        <div id = title> 
+            <h1>Make a Recommendation</h1>
+        </div>
+        <div id = sidebar>
+        </div>
+        <div id = main>
+            <h3>If you don't need any book recommendations, try making one!</h3>
+            <form method = "GET">
+                <label><b>Enter a Book Rec: </b></label>
+                <input type="text" name="message" id="input">
+              </form>
+            
+              <input type="submit" onclick="printInput();"><br/>
+              <br/><label>Your Recs: </label>
+              <p><span id='text'></span></p>
+
+              <div id = table>
+              <h3>More resources: </h3>
+              <table>
+                <tr>
+                    <th>Youtube Channels</th>
+                    <th>Websites</th>
+                    <th>Articles</th>
+                </tr>
+                <tr>
+                    <td><a href = "https://www.youtube.com/c/EpicReads/videos">Epic Reads</a></td>
+                    <td><a href = "https://read.gov/adults/">Library of Congress</a></td>
+                    <td><a href = "https://bookriot.com/how-to-start-reading/">Starting to read</a></td>
+                </tr>
+                <tr>
+                    <td><a href = "https://www.youtube.com/c/booksandquills/videos">booksandquills of Congress</a></td>
+                    <td><a href = "https://www.bookfinder.com/">BookFinder</a></td>
+                    <td><a href = "https://www.healthline.com/health/benefits-of-reading-books#bypass-tv">Why Read?</a></td>
+                </tr>
+                <tr>
+                    <td><a href = "https://www.youtube.com/c/PeruseProject/videos">PeruseProject</a></td>
+                    <td><a href = "https://www.nasa.gov/mission_pages/station/research/researcher_guide">NASA Researchers Guides</a></td>
+                    <td><a href = "https://fs.blog/reading/">Reading Better</a></td>
+                </tr>
+              </table>
+            </div>
+            
+        </div> 
+
+        <div id = footer>
+            <p>&copy 2022 Eleanor Colvin</p>
+        </div>
+    </div>  
+</body>
+</html>
