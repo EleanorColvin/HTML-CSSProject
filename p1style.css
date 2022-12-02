@@ -6,7 +6,10 @@
     margin: 5px;
     overflow: auto;
     height: 100%;
+    padding: 10px;
 }
+
+
 
 img {
     width: 100%;
@@ -29,16 +32,16 @@ img {
 }
 
 .text {
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 0px;
     top: 30px;
     height: 100%;
     left: 0;
     opacity: 0%;
     justify-items: center;
-    margin: 13px;
+    margin: 12px;
     left: 5px;
 }
 
@@ -81,6 +84,10 @@ img {
         top: 20px;
         font-size: 13px;
     }
+    .text{
+        margin-top: 0px;
+        font-size: 10px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -91,6 +98,10 @@ img {
     .cover p {
         top: 40px;
         font-size: 20px;
+    }
+    .text{
+        margin-top: 5px;
+        font-size: 14px;
     }
 }
 

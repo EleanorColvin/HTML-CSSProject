@@ -21,6 +21,10 @@ body {
     align-items: center;
 }
 
+.page:hover{
+    color: yellow;
+}
+
 #title {
     background-color: lightblue;
     grid-column: span 5;
@@ -46,6 +50,22 @@ a {
     grid-column: span 5;
     grid-row: span 9;
     padding: 20px;
+    overflow: auto;
+}
+#bookForm{
+
+    background-color: pink;
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    margin: 15px;
+}
+
+button{
+    background-color: hotpink;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 p {
@@ -80,7 +100,7 @@ table {
 
 td {
     border: 1px solid;
-    padding: 5px;
+    padding: 8px;
     background-color: white;
 }
 
