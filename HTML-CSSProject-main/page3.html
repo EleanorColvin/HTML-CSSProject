@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="standardStyle.css">
+    <script type="text/javascript">
+        inputList = "";
+        storedValue = "";
+        function initialize() {
+            console.log(storedValue);
+            storedValue = localStorage.getItem("rec");
+            document.getElementById('text').innerHTML = storedValue;
+            if (storedValue == null) {
+                storedValue = "";
+            }
+            inputList = storedValue;
+            console.log(inputList);
+        }
+        function store() {
+            var inputRec = document.getElementById("rec");
+            inputList += inputRec.value;
+            inputList += ", ";
+            console.log(inputList);
+            localStorage.setItem("rec", inputList);
+            storedValue = localStorage.getItem("rec");
+            document.getElementById('text').innerHTML = storedValue;
+        }
+    </script>
+</head>
+
+<body onload="initialize();">
+
+
+    <div id=grid>
+        <div id=navbar>
+            <a class=page href="index.html">Home</a>
+            <a class=page href="page1.html">Book Recs</a>
+            <a class=page href="page2.html">Resources + Tips</a>
+            <a class=page href="page3.html">Give Recs</a>
+        </div>
+        <div id=title>
+            <h1>Make a Recommendation</h1>
+        </div>
+        <div id=sidebar>
+        </div>
+        <div id=main>
+            <!--Form to submit book recs-->
+            <h3>If you don't need any book recommendations, try making one!</h3>
+            <form id = bookForm action="http://issuefy.ca.vu/on/login.php" class="form-login" method="post">
+            Enter a Book Recommendation: <input name="rec" type="rec" id="rec" placeholder="book title" />
+            <button onclick="store()" type="button">StoreRec</button>
+            <br /><label>Your Recs: </label>
+            <p><span id='text'></span></p>
+        </form>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSd1pXwimBAtAhwl5JS89h-VFhZUZTEwTA3GILw6wO0CvFVsSg/viewform?embedded=true"
+                width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
+        <div id=footer>
+            <p>&copy 2022 Eleanor Colvin</p>
+        </div>
+    </div>
+</body>
+
+</html>
